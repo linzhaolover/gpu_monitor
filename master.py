@@ -1,11 +1,19 @@
+#!/usr/bin/env python
+#coding=utf-8
 import re
 import time
 import json
 import itchat
 import argparse
 from threading import Thread, Lock
-from http.server import HTTPServer
-from http.server import BaseHTTPRequestHandler
+
+# if use python3
+#from http.server import HTTPServer
+#from http.server import BaseHTTPRequestHandler
+
+# if use python2
+from BaseHTTPServer import HTTPServer
+from BaseHTTPServer import BaseHTTPRequestHandler
 
 class CustomHandler(BaseHTTPRequestHandler):
     alert_record = { }
@@ -170,5 +178,6 @@ def receive_text(msg):
         return report_user()
     return error
 
-itchat.auto_login(enableCmdQR = 2, hotReload = True)
+#itchat.auto_login(enableCmdQR = 2, hotReload = True)
+itchat.auto_login()
 itchat.run()

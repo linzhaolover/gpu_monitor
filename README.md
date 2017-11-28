@@ -56,3 +56,9 @@ david David
 ```python
 python master.py -h
 ```
+
+# Reference
+``` shell
+http://www.jianshu.com/p/1b6e3636fa50
+https://github.com/QuantumLiu/ItChat
+```

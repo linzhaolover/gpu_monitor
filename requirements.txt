@@ -1,0 +1,6 @@
+#flask
+#redis
+itchat
+psutil
+requests
+httpserver
